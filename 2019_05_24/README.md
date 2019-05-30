@@ -2,6 +2,6 @@
 
 Se desarrollaron 3 programas en c:
 
-*[basico.c](basico.c)
-*[libfun.c](libfun.c)
-*[libfun.h](libfun.h)
+* [basico.c](basico.c)
+* [libfun.c](libfun.c)
+* [libfun.h](libfun.h)
