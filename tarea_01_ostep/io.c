@@ -12,15 +12,26 @@ int main(){
 
       char letra;
 
-     while(feof(flow) == 0){
+     int pos;
+
+    // pos = ftell(flow);
+    pos = fseek(flow, -3, SEEK_END);
+
+    if(pos == 0){
+     printf("posicion 1\n");
+    }else{
+      printf("posicion----\n");
+     }
+
+   /*  while(feof(flow) == 0){
 
         letra = fgetc(flow);
         printf("%c", letra);
-          } 
+          }*/
 
   fclose(flow);
   printf("\nLECTURA EXITOSA");
-  
+
 
 return 0;
 }
