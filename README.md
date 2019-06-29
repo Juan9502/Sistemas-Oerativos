@@ -10,3 +10,10 @@ CLASES
 * [2019_05_31](2019_05_31)
 * [2019_06_14](2019_06_14)
 * [2019_06_21](2019_06_21)
+
+
+
+TAREAS
+
+* [Tarea 1](tarea_01_ostep)
+* [Tarea 2, ejercicios cap 5](Ejercicios_programacion_C05)
