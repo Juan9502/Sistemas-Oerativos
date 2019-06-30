@@ -15,13 +15,15 @@ int main (){
      exit(1);
    }
    else if(rc == 0){
-    num = num + 1;
     printf("hello, I'm the child (pid:%d)\n", (int) getpid());
+    num = num + 1;
+    printf("numero ---> %d\n", num);
    }
    else{
     int rc_wait = wait(NULL);
-    num = num + 1;
     printf("hello, I'm the father of %d (rc_wait:%d) (pid:%d)\n", rc, rc_wait, (int) getpid());
+    num = num + 2;
+    printf("numero ---> %d\n", num);
    }
 
 return 0;
