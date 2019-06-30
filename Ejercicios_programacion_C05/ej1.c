@@ -15,15 +15,17 @@ int main (){
      exit(1);
    }
    else if(rc == 0){
-    printf("hello, I'm the child (pid:%d)\n", (int) getpid());
-    num = num + 1;
-    printf("numero ---> %d\n", num);
+    printf("hola, yo soy el hijo (pid:%d)\n", (int) getpid());
+    printf("el valor de la variable en hijo: %d\n", num);
+    num = num * 10;
+    printf("el hijo cambia el valor de la variable a: %d\n", num);
    }
    else{
     int rc_wait = wait(NULL);
-    printf("hello, I'm the father of %d (rc_wait:%d) (pid:%d)\n", rc, rc_wait, (int) getpid());
-    num = num + 2;
-    printf("numero ---> %d\n", num);
+    printf("hola, yo soy el padre de: %d (rc_wait:%d) (pid:%d)\n", rc, rc_wait, (int) getpid());
+    printf("el valor de la variable padre es: %d\n", num);
+    num = num * 20;
+    printf("el padre cambia el valor de la variable a: %d\n", num);
    }
 
 return 0;
