@@ -15,7 +15,7 @@ del capítulo 5.
   y ambos dejan su mensaje en el guardado. 
 
 
-* [Ejercicio 3](ej3.c) \n
+* [Ejercicio 3](ej3.c)
 * Para solucionar este problema, en el proceso hijo detuve el proceso padre con la funcion kill() enviandole
   como argumento el pid del proceso padre.
   Luego en el proceso padre le envio la señal SIGCONT para que continue el proceso y le envio el metodo
