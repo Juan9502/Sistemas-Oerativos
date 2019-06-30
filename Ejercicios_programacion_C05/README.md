@@ -16,7 +16,7 @@ del capítulo 5.
 
 
 * [Ejercicio 3](ej3.c) \n
-  Para solucionar este problema, en el proceso hijo detuve el proceso padre con la funcion kill() enviandole
+* Para solucionar este problema, en el proceso hijo detuve el proceso padre con la funcion kill() enviandole
   como argumento el pid del proceso padre.
   Luego en el proceso padre le envio la señal SIGCONT para que continue el proceso y le envio el metodo
   sig_handler que es el que mostrara el mensaje de "adios", por ultimo uso la funcion pause() que hace
