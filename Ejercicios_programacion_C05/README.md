@@ -1,4 +1,4 @@
 En esta carpeta estarán todos los archivos que dan soluciń a las preguntas
 del capítulo 5.
 
-* 1. 
+* [ejercicio 1](ej1.c) 
