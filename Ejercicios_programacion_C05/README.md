@@ -42,3 +42,9 @@ del capítulo 5.
 * El waitpid() es util cuando tenemos varios procesos hijos, en wait se espera a que cualquiera de los hijos
   que llama  a la funcion wait cambie de estado; en waitpid se suspende el proceso cuando el hijo que ha sido
   especificado con el argumento pid cambia de estado. 
+
+
+* [Ejercicio 7](ej7.c)
+* Al realizar la llamada a printf() despues de cerrar el output(STDOUT_FILENO) vemos que 
+  si se creo un proceso hijo, pues el resultado de compilar es el mensaje del padre referenciando
+  el pid del hijo, pero el hijo no muestra su salida.
