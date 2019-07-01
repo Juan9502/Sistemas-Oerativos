@@ -28,3 +28,11 @@ del capítulo 5.
 * [Ejercicio 4](ej4.c)
 * en este ejercicio es donde se muestra el funcionamiento de las variantes de exec(): execl(), execle(),
   execv(), etc. 
+
+
+
+* [Ejercicio 5](ej5.c)
+* En este ejercicio lo que vemos cuando se usa el wait() en el padre es que el proceso efectivamente espera
+  a que primero se ejecute el proceso hijo, y el wait retorna el pid del hijo, cuando se usa el wait en el hijo
+  lo que sucede es igual, el hijo espera a que primero se ejecute el padre, pero esta vez el valor que devuelve
+  el wait es -1.
