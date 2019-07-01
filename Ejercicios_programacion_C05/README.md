@@ -23,3 +23,8 @@ del capítulo 5.
   que el proceso se duerma hasta que llegue la señal.
   de esta manera se puede ver como el hijo es quien envia primero el mensaje sin tener que utilizar
   el llamado wait().
+
+
+* [Ejercicio 4](ej4.c)
+* en este ejercicio es donde se muestra el funcionamiento de las variantes de exec(): execl(), execle(),
+  execv(), etc. 
