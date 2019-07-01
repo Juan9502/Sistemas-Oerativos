@@ -36,3 +36,9 @@ del capítulo 5.
   a que primero se ejecute el proceso hijo, y el wait retorna el pid del hijo, cuando se usa el wait en el hijo
   lo que sucede es igual, el hijo espera a que primero se ejecute el padre, pero esta vez el valor que devuelve
   el wait es -1.
+
+
+* [Ejercicio 6](ej6.c)
+* El waitpid() es util cuando tenemos varios procesos hijos, en wait se espera a que cualquiera de los hijos
+  que llama  a la funcion wait cambie de estado; en waitpid se suspende el proceso cuando el hijo que ha sido
+  especificado con el argumento pid cambia de estado. 
