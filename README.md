@@ -17,3 +17,4 @@ TAREAS
 
 * [Tarea 1](tarea_01_ostep)
 * [Tarea 2, ejercicios cap 5](Ejercicios_programacion_C05)
+* [Tarea 3, capìtulos 4, 5 y shell](Asignacion Tarea Programacion)
