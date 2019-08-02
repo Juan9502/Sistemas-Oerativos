@@ -8,7 +8,7 @@
 volatile int counter = 100;
 puerta door;
 int loops;
-
+double seg; //variable para guardar el tiempo de ejecucion
 void *worker(void *arg) {
     int i;
     cerrar_puerta(door);//cierra la puerta
@@ -23,14 +23,11 @@ void *worker(void *arg) {
 int main(int argc, char *argv[]) {
     //para medir el tiempo
     clock_t t_ini, t_fin;
-    double seg;
 
     t_ini = clock();
     if (argc != 2) { 
 	fprintf(stderr, "usage: threads <loops>\n"); 
 	exit(1); 
-    seg = (double)(t_fin - t_ini) / CLOCKS_PER_SEC;
-    printf("\nel tiempo que tarda es: ", seg);
     } 
 
 
@@ -45,5 +42,8 @@ int main(int argc, char *argv[]) {
     printf("Final value   : %d\n", counter);
     destruir_puerta(door);
     t_fin = clock();
+
+    seg = (double) (t_fin - t_ini) / CLOCKS_PER_SEC; //calcula el tiempo
+    printf("tiempo: \n", seg);
     return 0;
 }
