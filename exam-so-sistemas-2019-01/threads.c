@@ -3,6 +3,7 @@
 #include "common.h"
 #include "common_threads.h"
 #include "mycommon.h"
+#include <time.h>
 
 volatile int counter = 100;
 puerta door;
@@ -10,18 +11,26 @@ int loops;
 
 void *worker(void *arg) {
     int i;
-    cerrar_puerta(door);
+    cerrar_puerta(door);//cierra la puerta
     for (i = 0; i < loops; i++) {
+        cerrar_puerta(door);//cierra la puerta antes de incrementar la variable
 	counter++;
     }
-    abrir_puerta(door);
+    abrir_puerta(door);//abre la puerta
     return NULL;
 }
 
 int main(int argc, char *argv[]) {
+    //para medir el tiempo
+    clock_t t_ini, t_fin;
+    double seg;
+
+    t_ini = clock();
     if (argc != 2) { 
 	fprintf(stderr, "usage: threads <loops>\n"); 
 	exit(1); 
+    seg = (double)(t_fin - t_ini) / CLOCKS_PER_SEC;
+    printf("\nel tiempo que tarda es: ", seg);
     } 
 
 
@@ -35,5 +44,6 @@ int main(int argc, char *argv[]) {
     abrir_puerta(door);
     printf("Final value   : %d\n", counter);
     destruir_puerta(door);
+    t_fin = clock();
     return 0;
 }
