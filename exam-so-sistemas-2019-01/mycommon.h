@@ -3,7 +3,7 @@
  
 #include "pthread.h"
 #include "common.h"
-//#include "common_threads.h"
+#include "common_threads.h"
 #define puerta pthread_mutex_t // nuevo tipo de dato
 #define crear_puerta(m) pthread_mutex_init(&m,NULL) // funcion para crear puerta
 #define cerrar_puerta(m) pthread_mutex_lock(&m) // funcion para cerrar la puerta
