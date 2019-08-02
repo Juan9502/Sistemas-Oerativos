@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
     if (argc != 2) { 
 	fprintf(stderr, "usage: threads <loops>\n"); 
 	exit(1); 
-    } 
+    }
 
 
     loops = atoi(argv[1]);
@@ -44,6 +44,6 @@ int main(int argc, char *argv[]) {
     t_fin = clock();
 
     seg = (double) (t_fin - t_ini) / CLOCKS_PER_SEC; //calcula el tiempo
-    printf("tiempo: \n", seg);
+   // printf("tiempo: \n", seg);
     return 0;
 }
